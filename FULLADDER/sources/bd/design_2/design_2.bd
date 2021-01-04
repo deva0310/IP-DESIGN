@@ -1,0 +1,109 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA8317C8BA8317C8B",
+      "device": "xc7a35tftg256-1",
+      "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "adder_0": "",
+      "adder_1": "",
+      "util_vector_logic_0": ""
+    },
+    "ports": {
+      "a_0": {
+        "direction": "I"
+      },
+      "b_0": {
+        "direction": "I"
+      },
+      "cin": {
+        "direction": "I"
+      },
+      "sum": {
+        "direction": "O"
+      },
+      "cout": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "adder_0": {
+        "vlnv": "xilinx.com:user:adder:1.0",
+        "xci_name": "design_2_adder_0_0"
+      },
+      "adder_1": {
+        "vlnv": "xilinx.com:user:adder:1.0",
+        "xci_name": "design_2_adder_0_1"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_2_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "adder_0_s": {
+        "ports": [
+          "adder_0/s",
+          "adder_1/a"
+        ]
+      },
+      "adder_1_c": {
+        "ports": [
+          "adder_1/c",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "adder_0_c": {
+        "ports": [
+          "adder_0/c",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "a_0_1": {
+        "ports": [
+          "a_0",
+          "adder_0/a"
+        ]
+      },
+      "b_0_1": {
+        "ports": [
+          "b_0",
+          "adder_0/b"
+        ]
+      },
+      "b_1_1": {
+        "ports": [
+          "cin",
+          "adder_1/b"
+        ]
+      },
+      "adder_1_s": {
+        "ports": [
+          "adder_1/s",
+          "sum"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "cout"
+        ]
+      }
+    }
+  }
+}
